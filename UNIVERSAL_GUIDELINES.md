@@ -268,7 +268,45 @@ If you encounter situations not covered here or feel unsure:
 
 ---
 
-## 📞 Maintaining These Guidelines
+## � Adding New Guidance to These Guidelines
+
+When you discover a new practice, pattern, or improvement:
+
+### If it's universal (applies to all or most projects):
+**Update the Universal Guidelines** at: `https://github.com/hwacookie/ai-coding-guidelines/blob/main/UNIVERSAL_GUIDELINES.md`
+
+1. Edit `UNIVERSAL_GUIDELINES.md` directly
+2. Add the new principle or practice
+3. Commit with a clear message: "Add [topic] guidance"
+4. Push to main branch
+5. All projects benefit immediately
+
+### If it's project-specific:
+**Update the project's `.github/copilot-instructions.md`** instead:
+
+- Project-specific instructions
+- Local workflow changes
+- Architecture or framework decisions
+- Project-specific patterns or shortcuts
+
+Examples of **universal guidance**:
+- ✅ "Always activate virtual environments before working"
+- ✅ "Write clear commit messages with context"
+- ✅ "Test code before committing"
+- ✅ "Discuss major changes before implementing"
+
+Examples of **project-specific guidance**:
+- ✅ "Use Flask for this project"
+- ✅ "Socket.IO handles real-time updates here"
+- ✅ "Python virtual environment at `.venv/`"
+- ✅ "Node.js test client in `test-client/` folder"
+
+### If you can't access the universal guidelines repo:
+Remind the user that it should be updated in the universal guidelines repository, not in project-specific instructions.
+
+---
+
+## �📞 Maintaining These Guidelines
 
 These guidelines should evolve as projects grow and lessons are learned.
 
