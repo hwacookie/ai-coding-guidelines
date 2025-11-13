@@ -168,6 +168,96 @@ Before asking for help or pushing code:
 
 ---
 
+## 🧪 Testing & Validation
+
+- **Real tests, not trivial checks** - Meaningful tests that verify functionality
+- **Verify actual behavior** - Create tests that exercise core functionality, not just check if commands work
+- **Test before committing** - Run tests to verify changes actually work
+- **Show evidence** - When committing a fix, demonstrate that it works with test results or screenshots
+
+---
+
+## 📚 Git & Version Control Practices
+
+- **Commit frequently** - Each commit should represent one logical change
+- **Write clear commit messages** - Include context about what changed and why (not just "fixed bug")
+- **Review before committing** - Use `git diff` to review changes carefully first
+- **Keep .gitignore clean** - Don't commit:
+  - Virtual environments (`node_modules/`, `.venv/`, `venv/`)
+  - Generated files and build artifacts
+  - Sensitive information (secrets, API keys, .env files)
+- **Remove mistakenly-committed files** - Use `git rm --cached filename` if needed
+- **Meaningful history** - One logical change per commit (not too granular, not too large)
+
+---
+
+## 📖 Documentation Practices
+
+- **Keep docs in sync** - Update documentation when code changes
+- **Explain "why" not "what"** - Comments should explain reasoning; code shows what it does
+- **Document significant changes** - Create docs for major features or refactorings
+- **Update architecture docs** - Reflect actual project structure when it changes
+- **Remove outdated comments** - Delete misleading or stale documentation
+- **Clear and current** - Documentation should reflect current state of code
+
+---
+
+## ✅ Before Each Session
+
+- [ ] Read the universal guidelines (this document)
+- [ ] Read the project-specific copilot instructions
+- [ ] Check git status: `git status`
+- [ ] Review recent commits: `git log --oneline -10`
+- [ ] Activate virtual environment if needed (Python/Node)
+- [ ] For each task:
+  - [ ] Understand the requirement
+  - [ ] Ask clarifying questions
+  - [ ] Analyze existing code
+  - [ ] **Discuss approach before implementing**
+  - [ ] Implement only after approval
+  - [ ] Test thoroughly before committing
+  - [ ] Write clear commit message
+  - [ ] Push when ready
+
+---
+
+## 🚀 When Starting New Work
+
+1. **Ask for clarification** - "What would you like to work on?" and wait for response
+2. **Investigate** - Explore the codebase to understand current state
+3. **Present findings** - "I found that X currently works like Y, here's the relevant code..."
+4. **Confirm understanding** - "Is this the issue you're seeing?" or "What changes would you prefer?"
+5. **Wait for approval** - Discuss approach and get agreement before implementing
+6. **Implement** - Only proceed once aligned on the solution
+
+---
+
+## ✓ Quality Checklist Before Committing
+
+Before committing any code, verify:
+- ✅ Does this solve the stated problem?
+- ✅ Have I tested this locally and verified it works?
+- ✅ Is the code organized logically and following patterns?
+- ✅ Are there any side effects or breaking changes I should document?
+- ✅ Is the change documented (comments, docs, commit message)?
+- ✅ Does it follow established patterns in this project?
+- ✅ Did I discuss this with the user if it was significant?
+
+---
+
+## 📞 When Uncertain
+
+If you encounter situations not covered here or feel unsure:
+- **Ask the user** - They are the domain expert for their project
+- **Show your work** - Present what you found, analyzed, or discovered
+- **Suggest options** - "I see three approaches: A (pros/cons), B (pros/cons), or C (pros/cons)"
+- **Wait for feedback** - Let them decide the best path forward
+- **Reference this document** - Link to relevant sections if applicable
+
+**Better to ask and be aligned than to make wrong assumptions!**
+
+---
+
 ## 🎓 When to Ask for Help
 
 - Unsure about approach → Discuss first
