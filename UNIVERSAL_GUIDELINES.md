@@ -268,8 +268,40 @@ If you encounter situations not covered here or feel unsure:
 
 ---
 
-## 📞 Questions or Updates
+## 📞 Maintaining These Guidelines
 
-These guidelines should evolve as projects grow and lessons are learned. If you discover a gap or want to add something, update this document and commit it to the repository.
+These guidelines should evolve as projects grow and lessons are learned.
+
+### When to Update This Document
+Update this document when:
+- Discovering a principle that applies to **all projects** or **most projects**
+- Establishing a new best practice that benefits everyone
+- Fixing guidance that's unclear or incorrect
+- Adding new workflow or safety practices
+
+**How to update:**
+1. Navigate to the `ai-coding-guidelines` repository
+2. Edit `UNIVERSAL_GUIDELINES.md`
+3. Commit with a clear message: "Add [topic]" or "Clarify [topic]"
+4. Push to main branch
+5. All projects will benefit from the update immediately
+
+### When to Update Project-Specific Instructions
+Update a project's `.github/copilot-instructions.md` when:
+- Adding **project-specific** guidance (framework choices, specific tools, architecture decisions)
+- Changing **project-specific workflows** (deployment process, testing framework, file structure)
+- Adding **project-specific shortcuts** or patterns unique to that project
+- Documenting a project's **particular constraints or requirements**
+
+**How to update:**
+1. Edit `.github/copilot-instructions.md` in that project
+2. Commit with a clear message: "Update instructions: [change]"
+3. Push to the project's repository
+
+### Important
+- ❌ Don't duplicate universal guidance in project-specific instructions
+- ✅ Reference this universal guidelines document instead
+- ✅ Keep project instructions focused on what's unique about that project
+- 🔄 If you find a universal pattern while working on a project, add it here first
 
 Last updated: November 13, 2025
