@@ -131,6 +131,43 @@ Before asking for help or pushing code:
 
 ---
 
+## 💻 Shell Commands (Cross-Platform)
+
+**IMPORTANT:** Commands must work on the user's current shell - detect and adapt accordingly.
+
+**Detect the shell environment:**
+- If terminal shows `PS>` or `PS C:\...>` → PowerShell (Windows)
+- If terminal shows `$` or `user@host:~$` → Bash/Zsh (Linux/Mac)
+
+**Windows PowerShell - DO NOT USE:**
+- `head`, `grep`, `tail`, `cat`, `sed`, `awk` - these don't exist in PowerShell
+- `| head -100` → **BLOCKS INFINITELY - NEVER USE**
+- `| grep` → **BLOCKS INFINITELY - NEVER USE**
+- `2>&1` redirects → hides important error messages
+
+**Windows PowerShell - USE INSTEAD:**
+- `head -100` → Use `-TotalCount 100` or PowerShell's native Get-Content
+- `grep "pattern"` → Use `Select-String -Pattern "pattern"` or `Where-Object`
+- `tail -20` → Use `-Tail 20` parameter
+- Show all output naturally without `2>&1` redirects
+
+**Linux/Mac Bash - AVAILABLE TOOLS:**
+- `head`, `grep`, `tail`, `cat`, `sed`, `awk` all work normally
+- But still avoid unnecessary pipes that can block or be slow
+
+**General Rules (All Shells):**
+- **Be aware of pipes and redirects** - They can be useful, but be conscious of potential blocking or performance issues.
+  - Use pipes intentionally: `git diff | head -100` can block if output is slow, but `Select-String -Pattern "x" *.js` is fine for searching
+  - Output redirection like `2>&1` combines streams which can hide timing issues - know what you're doing
+  - When in doubt, avoid unnecessary piping or use native tool options instead: `git diff --stat` instead of `git diff | head`
+  - If a command seems to hang or isn't responding, pipes/redirects to filters could be the culprit
+
+- **For viewing file diffs:** Use `git diff` directly without piping. If output is long, use `git diff --stat` for summary, or `git diff filename` for specific file.
+- **For searching files:** Use built-in tools (PowerShell: `Select-String`, Bash: `grep`) or semantic_search/grep_search tools instead.
+- **For reading large files:** Use native tools with line limits or the read_file tool with specific line ranges.
+
+---
+
 ## 🎓 When to Ask for Help
 
 - Unsure about approach → Discuss first
