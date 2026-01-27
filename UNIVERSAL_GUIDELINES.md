@@ -1,6 +1,12 @@
 # Universal AI Coding Guidelines
 
 This document contains best practices and guidelines that apply across **all projects**. Project-specific guidelines should reference this document and extend it with project-specific rules.
+Make sure you also read project specific guidelines, they may exist in places like:
+
+- the .agent/rules/ folder.
+- .github/copilot-instructions.md
+- .github/instructions/*.instructions.md
+
 
 ---
 
@@ -205,7 +211,7 @@ Before asking for help or pushing code:
 ## ✅ Before Each Session
 
 - [ ] Read the universal guidelines (this document)
-- [ ] Read the project-specific copilot instructions
+- [ ] Read the project-specific instructions
 - [ ] Check git status: `git status`
 - [ ] Review recent commits: `git log --oneline -10`
 - [ ] Activate virtual environment if needed (Python/Node)
@@ -282,7 +288,7 @@ When you discover a new practice, pattern, or improvement:
 5. All projects benefit immediately
 
 ### If it's project-specific:
-**Update the project's `.github/copilot-instructions.md`** instead:
+**Update the project's `.github/copilot-instructions.md` or the `.agent/rules/instructions.md` file, depending on what can be found there.**
 
 - Project-specific instructions
 - Local workflow changes
@@ -325,14 +331,14 @@ Update this document when:
 5. All projects will benefit from the update immediately
 
 ### When to Update Project-Specific Instructions
-Update a project's `.github/copilot-instructions.md` when:
+Update the project specific instructions  when:
 - Adding **project-specific** guidance (framework choices, specific tools, architecture decisions)
 - Changing **project-specific workflows** (deployment process, testing framework, file structure)
 - Adding **project-specific shortcuts** or patterns unique to that project
 - Documenting a project's **particular constraints or requirements**
 
 **How to update:**
-1. Edit `.github/copilot-instructions.md` in that project
+1. Edit `.github/copilot-instructions.md` or the `.agent/rules/instructions.md`  in that project
 2. Commit with a clear message: "Update instructions: [change]"
 3. Push to the project's repository
 
@@ -342,4 +348,3 @@ Update a project's `.github/copilot-instructions.md` when:
 - ✅ Keep project instructions focused on what's unique about that project
 - 🔄 If you find a universal pattern while working on a project, add it here first
 
-Last updated: November 13, 2025
