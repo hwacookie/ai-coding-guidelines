@@ -121,6 +121,7 @@ Safe commands that don't need approval:
 - ❌ Ignoring warnings or error messages
 - ❌ Forgetting to test locally before committing
 - ❌ Merging conflicting changes without understanding them
+- ❌ Running `pip` or `python` without activating the virtual environment
 
 ---
 
@@ -171,6 +172,24 @@ Before asking for help or pushing code:
 - **For viewing file diffs:** Use `git diff` directly without piping. If output is long, use `git diff --stat` for summary, or `git diff filename` for specific file.
 - **For searching files:** Use built-in tools (PowerShell: `Select-String`, Bash: `grep`) or semantic_search/grep_search tools instead.
 - **For reading large files:** Use native tools with line limits or the read_file tool with specific line ranges.
+
+---
+
+## 🐍 Python Environment Safety
+
+**CRITICAL:** Whenever a terminal is opened:
+1. **Check for virtual environment:** Look for a `venv` or `.venv` directory.
+2. **ACTIVATE IT IMMEDIATELY:** If found, you MUST activate it before running any commands.
+   - Mac/Linux: `source venv/bin/activate` or `source .venv/bin/activate`
+   - Windows: `.\venv\Scripts\Activate` or `.\.venv\Scripts\Activate`
+
+**Why?**
+- Prevents using wrong Python versions
+- Ensures libraries are available
+- **Essential for all Python projects**
+
+**Safety Check:**
+- **ALWAYS** ensure the virtual environment is activated **BEFORE** running `pip` or `python`.
 
 ---
 
