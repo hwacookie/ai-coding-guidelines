@@ -3,7 +3,7 @@
 This document contains best practices and guidelines that apply across **all projects**. Project-specific guidelines should reference this document and extend it with project-specific rules.
 Make sure you also read project specific guidelines, they may exist in places like:
 
-- the .agent/rules/ folder.
+- the content of the .agent/rules/ folder (there may be multiple files in this directory, read them all!)
 - .github/copilot-instructions.md
 - .github/instructions/*.instructions.md
 
